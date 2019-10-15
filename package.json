@@ -1,0 +1,22 @@
+{
+  "name": "cruise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcvetal/cruise.git"
+  },
+  "author": "Artsybashev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arcvetal/cruise/issues"
+  },
+  "homepage": "https://github.com/arcvetal/cruise#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
