@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Roboto Slab';
+  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url("robotoslabregular.woff2") format("woff2"), url("robotoslabregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: local("Roboto Slab Bold"), local("RobotoSlab-Bold"), url("robotoslabbold.woff2") format("woff2"), url("robotoslabbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: local("Raleway Regular"), local("Raleway-Regular"), url("ralewayregular.woff2") format("woff2"), url("ralewayregular.woff") format("woff"), url("ralewayregular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("ralewaybold.woff2") format("woff2"), url("ralewaybold.woff") format("woff"), url("ralewaybold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
