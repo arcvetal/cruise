@@ -137,8 +137,8 @@ gulp.task('js:build', function () {
         // .pipe(uglify()) //Сожмем наш js
         // .pipe(sourcemaps.write()) //Пропишем карты
         // .pipe(rename('script.min.js'))
-        .pipe(gulp.dest('./src/js'));//Выплюнем готовый файл в build
-        //И перезагрузим сервер
+        .pipe(gulp.dest('./src/js'))//Выплюнем готовый файл в build
+        .pipe(browserSync.stream());//И перезагрузим сервер
 });
 
 
