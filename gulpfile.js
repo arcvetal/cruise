@@ -25,14 +25,14 @@ const path = {
     },
     src: { //Пути откуда брать исходники
         html: './src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-        js: './src/js/script.js',//В стилях и скриптах нам понадобятся только main файлы
+        js: './src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
         style: './src/scss/**/*.scss',
         img: './src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: './src/fonts/**/*.*'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: './src/**/*.html',
-        js: './src/js/**/*.js',
+        js: './src/js/main.js',
         style: './src/style/**/*.scss',
         img: './src/img/**/*.*',
         fonts: './src/fonts/**/*.*'
@@ -82,7 +82,7 @@ gulp.task('styles', function () {
         // }))
         .pipe(rename('style.min.css'))
         // .pipe(sourcemaps.write())
-        .pipe(gulp.dest('src/css'))
+        .pipe(gulp.dest('./src/css'))
         .pipe(browserSync.stream());  // =============== потом поменять на билд
         // .pipe(browserSync.stream());
 
@@ -137,20 +137,28 @@ gulp.task('js:build', function () {
         // .pipe(uglify()) //Сожмем наш js
         // .pipe(sourcemaps.write()) //Пропишем карты
         // .pipe(rename('script.min.js'))
-        .pipe(gulp.dest('./src/js'))//Выплюнем готовый файл в build
-        .pipe(browserSync.stream());//И перезагрузим сервер
+        .pipe(rename('mains.js'))
+        .pipe(gulp.dest('./src/js/script'))//Выплюнем готовый файл в build
+        .pipe(browserSync.reload());//И перезагрузим сервер
 });
 
 
 gulp.task('build', gulp.series('html:build', 'styles', 'image:build', 'fonts:build', 'js:build'));
 
 
-// gulp.task('browserSync', function() {
+// gulp.task('browserSync', function(done) {
 //   browserSync.init({
 //     server: {
 //       baseDir: './src/'
 //     },
-//   })
+//     port: 3000
+//   });
+//   done();
+// })
+
+// gulp.task('browserReload', function(done) {
+//   browserSync.reload();
+//   done();
 // })
 
 

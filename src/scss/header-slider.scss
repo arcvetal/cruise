@@ -1,4 +1,6 @@
 .header-slider {
-  width: 70%;
-  background-color: cyan;
+  &__item img {
+    width: 100%;
+    height: 583px;
+  }
 }
