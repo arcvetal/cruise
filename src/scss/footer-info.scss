@@ -1,0 +1,27 @@
+.footer-info {
+  text-align: center;
+
+  color: $font-color;
+  font-family: $font-raleway;
+
+  &__phone {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    font-weight: 700;
+  }
+
+  &__support {
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}

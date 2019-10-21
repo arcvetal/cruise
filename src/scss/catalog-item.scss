@@ -18,9 +18,8 @@
       content: "";
       display: flex;
       position: absolute;
-      width: 65px;
-      height: 65px;
-      background-color: #33c7fd;
+      width: 0;
+      height: 0;
       right: 24px;
       top: -10px;
       border-width: 80px 45px 20px;
@@ -28,14 +27,69 @@
       border-color: #33c7fd #33c7fd transparent;
     }
 
+    &::after {
+      content: "";
+      right: 24px;
+      top: -10px;
+      position: absolute;
+      display: flex;
+      padding: 0 12px;
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      width: 90px;
+      height: 100px;
+      color: white;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 18px;
+      font-family: $font-raleway;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
     &--hit {
 
       &::before {
+      }
+
+      &::after {
         content: "Хит продаж";
         justify-content: center;
         align-items: center;
         text-align: center;
-        color: white;
+      }
+    }
+
+    &--action {
+      &::before {
+        border-color: #f20442 #f20442 transparent;
+      }
+
+      &::after {
+        content: "Акция";
+      }
+
+    }
+
+    &--free-10 {
+      &::before {
+        border-color: #f20442 #f20442 transparent;
+      }
+
+      &::after {
+        content: "Скидка 10%";
+        text-align: center;
+      }
+    }
+
+    &--nothing {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
       }
     }
   }

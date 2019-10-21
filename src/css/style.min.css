@@ -125,7 +125,7 @@ body {
       background: transparent;
       display: block;
       height: 6px;
-      width: 80px;
+      width: 100px;
       outline: none;
       line-height: 0px;
       font-size: 0px;
@@ -207,13 +207,16 @@ body {
   font-weight: 400;
   border: none;
   outline: none; }
+  .btn--cruise {
+    margin: 0 auto; }
 
 .container {
   box-sizing: border-box;
   padding: 0 15px; }
 
 .page-content__wrapper {
-  background-color: #f3f3f3; }
+  background-color: #f3f3f3;
+  padding-bottom: 30px; }
 
 .page-content__title {
   text-align: center;
@@ -240,20 +243,50 @@ body {
       content: "";
       display: flex;
       position: absolute;
-      width: 65px;
-      height: 65px;
-      background-color: #33c7fd;
+      width: 0;
+      height: 0;
       right: 24px;
       top: -10px;
       border-width: 80px 45px 20px;
       border-style: solid;
       border-color: #33c7fd #33c7fd transparent; }
-    .catalog-item__img--hit::before {
+    .catalog-item__img::after {
+      content: "";
+      right: 24px;
+      top: -10px;
+      position: absolute;
+      display: flex;
+      padding: 0 12px;
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      width: 90px;
+      height: 100px;
+      color: white;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 18px;
+      font-family: "Raleway";
+      font-weight: 400;
+      text-transform: uppercase; }
+    .catalog-item__img--hit::after {
       content: "Хит продаж";
       justify-content: center;
       align-items: center;
-      text-align: center;
-      color: white; }
+      text-align: center; }
+    .catalog-item__img--action::before {
+      border-color: #f20442 #f20442 transparent; }
+    .catalog-item__img--action::after {
+      content: "Акция"; }
+    .catalog-item__img--free-10::before {
+      border-color: #f20442 #f20442 transparent; }
+    .catalog-item__img--free-10::after {
+      content: "Скидка 10%";
+      text-align: center; }
+    .catalog-item__img--nothing::before {
+      display: none; }
+    .catalog-item__img--nothing::after {
+      display: none; }
   .catalog-item__descr {
     padding-top: 12px;
     padding-left: 22px;
@@ -291,4 +324,69 @@ body {
       font-weight: 400; }
 
 .gallery {
-  padding-top: 30px; }
+  padding-top: 30px;
+  margin-bottom: 20px; }
+
+.contacts {
+  display: none; }
+
+.social-block {
+  margin-bottom: 15px; }
+  .social-block__title {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: #0d3351;
+    font-family: "Raleway";
+    font-weight: 400;
+    text-align: center; }
+  .social-block__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .social-block__item:not(:last-of-type) {
+    margin-right: 10px; }
+  .social-block__link {
+    font-size: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0d3351;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .social-block__link--vk {
+      background-image: url(../img/social-vk.svg);
+      background-size: 18px 11px; }
+    .social-block__link--ok {
+      background-image: url(../img/social-ok.svg);
+      background-size: 10px 16px; }
+    .social-block__link--youtube {
+      background-image: url(../img/social-youtube.svg);
+      background-size: 14px 18px; }
+    .social-block__link--insta {
+      background-image: url(../img/social-insta.svg);
+      background-size: 14px 14px; }
+
+.footer-info {
+  text-align: center;
+  color: #0d3351;
+  font-family: "Raleway"; }
+  .footer-info__phone {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    font-weight: 700; }
+  .footer-info__support {
+    font-size: 10px;
+    letter-spacing: 1px;
+    line-height: 18px;
+    font-weight: 400; }
+  .footer-info__copyright {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    font-weight: 400; }
