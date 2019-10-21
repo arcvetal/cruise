@@ -1,5 +1,9 @@
 .page-content {
 
+  &__wrapper {
+    background-color: $gray-bg;
+  }
+
 
   &__title {
     text-align: center;

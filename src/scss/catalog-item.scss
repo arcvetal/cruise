@@ -1,0 +1,90 @@
+.catalog-item {
+  background-color: white;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    position: relative;
+
+    & img {
+      display: block;
+      width: 100%;
+    }
+
+
+    &::before {
+      content: "";
+      display: flex;
+      position: absolute;
+      width: 65px;
+      height: 65px;
+      background-color: #33c7fd;
+      right: 24px;
+      top: -10px;
+      border-width: 80px 45px 20px;
+      border-style: solid;
+      border-color: #33c7fd #33c7fd transparent;
+    }
+
+    &--hit {
+
+      &::before {
+        content: "Хит продаж";
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+      }
+    }
+  }
+
+  &__descr {
+    padding-top: 12px;
+    padding-left: 22px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: $blue-font-color;
+    font-family: $font-roboto;
+    font-weight: 400;
+
+    &--anapa {
+      padding-right: 96px;
+    }
+
+  }
+
+  &__track {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: $font-color;
+    font-family: $font-raleway;
+    font-weight: bold;
+  }
+
+  &__price {
+    font-family: $font-roboto;
+    font-size: 30px;
+    line-height: 48px;
+    letter-spacing: 0;
+    color: $font-color;
+    font-weight: 400;
+
+    & span {
+      font-size: 18px;
+      letter-spacing: 1px;
+      text-decoration: line-through;
+      line-height: 48px;
+      color: #7a8f9f;
+      font-family: $font-roboto;
+      font-weight: 400;
+    }
+  }
+}
