@@ -1,0 +1,25 @@
+.main-menu {
+  display: none;
+  position: absolute;
+  padding: 30px;
+  top: 55px;
+  left: 15px;
+  z-index: 20;
+  background-color: $font-color;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 38px;
+    color: white;
+    font-family: $font-roboto;
+    font-weight: 400;
+  }
+}

@@ -2,20 +2,7 @@
   position: relative;
   min-width: 320px;
   min-height: 583px;
-
-  // &::after {
-  //   position: absolute;
-  //   content: "";
-  //   display: block;
-  //   width: 48px;
-  //   height: 224px;
-  //   bottom: -50px;
-  //   left: calc(50% - 28px);
-  //   background-image: url('../img/header-line-mobile.svg');
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  // }
-
+  
   &__container {
     position: absolute;
     top: 26px;

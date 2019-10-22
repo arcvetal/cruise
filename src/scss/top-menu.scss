@@ -1,3 +1,28 @@
 .top-menu {
-  display: none;
+  position: absolute;
+  top: 34px;
+  left: 15px;
+  font-size: 0;
+  width: 23px;
+  height: 2px;
+  background-color: $font-color;
+  z-index: 2;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 2px;
+    background-color: $font-color;
+  }
+
+  &::before {
+    top: -7px;
+  }
+
+  &::after {
+    bottom: -7px;
+  }
 }

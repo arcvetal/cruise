@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $('.header-slider__list').slick({
     dots: true,
+    arrows:false,
     infinite: true,
     fade: true,
     speed: 1500,
