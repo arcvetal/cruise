@@ -2,6 +2,7 @@ $(document).ready(function(){
   $('.header-slider__list').slick({
     dots: true,
     infinite: true,
+    fade: true,
     speed: 1500,
     autoplay: true,
     autoplaySpeed: 4000,
