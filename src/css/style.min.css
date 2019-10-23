@@ -163,24 +163,42 @@ body {
 
 .top-menu {
   position: absolute;
-  top: 34px;
+  top: 20px;
   left: 15px;
-  font-size: 0;
   width: 23px;
-  height: 2px;
-  background-color: #0d3351;
-  z-index: 2; }
-  .top-menu::before, .top-menu::after {
-    content: "";
-    position: absolute;
+  height: 18px;
+  font-size: 0;
+  z-index: 3; }
+  .top-menu span {
     display: block;
+    position: absolute;
+    top: 8px;
     width: 23px;
     height: 2px;
     background-color: #0d3351; }
-  .top-menu::before {
-    top: -7px; }
-  .top-menu::after {
-    bottom: -7px; }
+    .top-menu span::before, .top-menu span::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #0d3351;
+      z-index: 2; }
+    .top-menu span::before {
+      top: -7px; }
+    .top-menu span::after {
+      bottom: -7px; }
+  .top-menu--open span {
+    visibility: hidden;
+    width: 21px; }
+    .top-menu--open span::before {
+      visibility: visible;
+      transform-origin: left;
+      transform: rotate(45deg); }
+    .top-menu--open span::after {
+      visibility: visible;
+      transform-origin: left;
+      transform: rotate(-45deg); }
 
 .main-menu {
   display: none;
@@ -190,6 +208,9 @@ body {
   left: 15px;
   z-index: 20;
   background-color: #0d3351; }
+  .main-menu--visible {
+    height: 0;
+    padding: 0; }
   .main-menu__list {
     list-style: none;
     padding: 0;
@@ -202,6 +223,8 @@ body {
     color: white;
     font-family: "Roboto Slab";
     font-weight: 400; }
+  .main-menu--open {
+    display: block; }
 
 .page-header {
   position: relative;
@@ -269,7 +292,8 @@ body {
   text-align: center; }
 
 .catalog-item {
-  background-color: white; }
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
   .catalog-item:not(:last-of-type) {
     margin-bottom: 20px; }
   .catalog-item__img {

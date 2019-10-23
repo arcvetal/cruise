@@ -11,3 +11,13 @@ $(document).ready(function(){
     adaptiveHeight: true
   });
 });
+
+
+var hamburger = document.querySelector('.top-menu');
+var mainMenu = document.querySelector('.main-menu');
+
+hamburger.addEventListener('click', function (evt) {
+  hamburger.classList.toggle('top-menu--open');
+  mainMenu.classList.toggle('main-menu--open');
+
+})
