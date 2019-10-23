@@ -57,6 +57,11 @@
       background-image: url(../img/social-insta.svg);
       background-size: 14px 14px;
     }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .6);
+    }
   }
 
 }

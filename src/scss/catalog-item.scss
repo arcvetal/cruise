@@ -143,3 +143,26 @@
     }
   }
 }
+
+
+@media(min-width: 400px) {
+  .catalog-item {
+
+    &:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+
+
+    &__descr {
+      padding-right: 15px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__track {
+      font-size: 16px;
+    }
+  }
+}

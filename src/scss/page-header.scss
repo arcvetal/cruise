@@ -2,7 +2,7 @@
   position: relative;
   min-width: 320px;
   min-height: 583px;
-  
+
   &__container {
     position: absolute;
     top: 26px;
@@ -15,6 +15,7 @@
   }
 
   &__title {
+    max-width: 330px;
     font-family: $font-roboto;
     font-size: 20px;
     line-height: 48px;

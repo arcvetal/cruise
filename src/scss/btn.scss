@@ -15,7 +15,57 @@
   border: none;
   outline: none;
 
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    -webkit-transform: skewX(-45deg) translateX(0);
+    transform: skewX(-45deg) translateX(0);
+    -webkit-transition: none;
+    transition: none;
+
+    webkit-animation: moving 3s ease-in-out infinite;
+    -moz-animation: moving 3s ease-in-out infinite;
+    -ms-animation: moving 3s ease-in-out infinite;
+    -o-animation: moving 3s ease-in-out infinite;
+    animation: moving 3s ease-in-out infinite;
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    z-index: 8;
+
+  }
+
+  &:hover::before {
+    animation-iteration-count: 0;
+  }
+
+
   &--cruise {
     margin: 0 auto;
+  }
+}
+
+
+@keyframes moving {
+  30% {  webkit-transform: skewX(-45deg) translateX(33.5em);
+    transform: skewX(-45deg) translateX(33.5em);
+  }
+
+  100% {  webkit-transform: skewX(-45deg) translateX(33.5em);
+    transform: skewX(-45deg) translateX(33.5em);
   }
 }
