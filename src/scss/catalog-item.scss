@@ -145,7 +145,7 @@
 }
 
 
-@media(min-width: 400px) {
+@media(min-width: $width-400) {
   .catalog-item {
 
     &:not(:last-of-type) {
@@ -164,5 +164,18 @@
     &__track {
       font-size: 16px;
     }
+  }
+}
+
+@media(min-width: $width-620){
+  .catalog-item {
+    width: 45.5vw;
+    margin-bottom: 30px;
+  }
+}
+
+@media(min-width: $width-750){
+  .catalog-item {
+    width: 345px;
   }
 }

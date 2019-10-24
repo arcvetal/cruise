@@ -32,3 +32,17 @@
 
   }
 }
+
+@media(min-width: $width-620) {
+  .page-header {
+
+    &__container {
+      top: 145px;
+    }
+
+    &__title {
+      max-width: initial;
+      line-height: 40px;
+    }
+  }
+}

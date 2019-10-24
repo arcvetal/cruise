@@ -63,5 +63,44 @@
       box-shadow: 0 3px 6px rgba(0, 0, 0, .6);
     }
   }
+}
+
+
+@media(min-width: $width-400) {
+  .social-block {
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__item {
+
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+    }
+
+    &__link {
+      width: 40px;
+      height: 40px;
+
+      &--vk {
+        background-size: 20px 13px;
+      }
+
+      &--ok {
+        background-size: 12px 18px;
+      }
+
+      &--youtube {
+        background-size: 16px 20px;
+      }
+
+      &--insta {
+        background-size: 16px 16px;
+      }
+    }
+
+  }
 
 }

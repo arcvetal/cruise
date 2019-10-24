@@ -30,3 +30,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@keyframes moving {
+  30% {  webkit-transform: skewX(-45deg) translateX(33.5em);
+    transform: skewX(-45deg) translateX(33.5em);
+  }
+
+  100% {  webkit-transform: skewX(-45deg) translateX(33.5em);
+    transform: skewX(-45deg) translateX(33.5em);
+  }
+}

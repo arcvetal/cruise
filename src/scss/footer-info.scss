@@ -25,3 +25,21 @@
     font-weight: 400;
   }
 }
+
+
+@media(min-width: $width-400) {
+  .footer-info {
+
+    &__phone {
+      font-size: 16px;
+    }
+
+    &__support {
+      font-size: 14px;
+    }
+
+    &__copyright {
+      font-size: 16px;
+    }
+  }
+}
