@@ -12,33 +12,86 @@
 
   <header class="page-header">
 
+    <div class="wrapper">
 
-    <div class="top-menu">
-      Меню
-      <span></span>
-    </div>
+      <div class="top-menu">
+        Меню
+        <span></span>
+      </div>
 
-    <div class="main-menu">
-      <ul class="main-menu__list">
-        <li class="main-menu__item">
-          <a href="#" class="main-menu__link">Популярные маршруты</a>
-        </li>
-        <li class="main-menu__item">
-          <a href="#" class="main-menu__link">Расписание рейсов</a>
-        </li>
-        <li class="main-menu__item">
-          <a href="#" class="main-menu__link">Забронированные рейсы</a>
-        </li>
-        <li class="main-menu__item">
-          <a href="#" class="main-menu__link">Вход для партнеров</a>
-        </li>
-        <li class="main-menu__item">
-          <a href="#" class="main-menu__link">О компании</a>
-        </li>
-        <li class="main-menu__item">
-          <a href="#" class="main-menu__link">Контакты</a>
-        </li>
-      </ul>
+      <div class="main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">Популярные маршруты</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">Расписание рейсов</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">Забронированные рейсы</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">Вход для партнеров</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">О компании</a>
+          </li>
+          <li class="main-menu__item">
+            <a href="#" class="main-menu__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="header-menu">
+
+        <div class="header-menu__item">
+          <a href="#" class="header-menu__title header-menu__title--personal">Личный кабинет</a>
+          <ul class="header-menu__drop-list">
+            <li class="header-menu__drop-item">
+              <a href="#" class="header-menu__drop-link">Настройки</a>
+            </li>
+            <li class="header-menu__drop-item">
+              <a href="#" class="header-menu__drop-link">Мои заказы</a>
+            </li>
+            <li class="header-menu__drop-item">
+              <a href="#" class="header-menu__drop-link">Выйти</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header-menu__item">
+          <a href="#" class="header-menu__title header-menu__title--money">Рубль</a>
+          <ul class="header-menu__drop-list">
+            <li class="header-menu__drop-item">
+              <a href="#" class="header-menu__drop-link">Рубль</a>
+            </li>
+            <li class="header-menu__drop-item">
+              <a href="#" class="header-menu__drop-link">Доллар</a>
+            </li>
+            <li class="header-menu__drop-item">
+              <a href="#" class="header-menu__drop-link">Евро</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header-menu__item">
+          <a href="#" class="header-menu__title header-menu__title--language">Ru</a>
+          <ul class="header-menu__drop-list">
+            <li class="header-menu__drop-item">
+              <a href="#" class="header-menu__drop-link">Ru</a>
+            </li>
+            <li class="header-menu__drop-item">
+              <a href="#" class="header-menu__drop-link">En</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header-menu__item header-menu__item--info">
+          <a href="tel:88005006105">8 800 500-61-05</a><br>
+          <span>Круглосуточная поддержка</span>
+        </div>
+      </div>
+
     </div>
 
     <div class="page-header__wrapper">
@@ -59,20 +112,22 @@
         <div class="header-slider__list">
           <div class="header-slider__item">
             <picture>
-              <source srcset="./img/header-bg-tablet.jpg" media="(min-width: 400px)">
+              <source srcset="./img/header-bg-desktop-1.jpg" media="(min-width: 1080px)">
+              <source srcset="./img/header-bg-tablet-1.jpg" media="(min-width: 400px)">
               <img src="./img/header-bg-mobile-1.jpg" alt="">
             </picture>
           </div>
           <div class="header-slider__item">
             <picture>
-              <source srcset="./img/header-bg-tablet.jpg" media="(min-width: 400px)">
+              <source srcset="./img/header-bg-desktop-2.jpg" media="(min-width: 1080px)">
+              <source srcset="./img/header-bg-tablet-2.jpg" media="(min-width: 400px)">
               <img src="./img/header-bg-mobile-2.jpg" alt="">
             </picture>
           </div>
           <div class="header-slider__item">
             <picture>
-              <source srcset="./img/header-bg-tablet.jpg" media="(min-width: 400px)">
-
+              <source srcset="./img/header-bg-desktop-3.jpg" media="(min-width: 1080px)">
+              <source srcset="./img/header-bg-tablet-3.jpg" media="(min-width: 400px)">
               <img src="./img/header-bg-mobile-3.jpg" alt="">
             </picture>
           </div>
@@ -95,7 +150,6 @@
           <div class="catalog-item">
             <div class="catalog-item__img  catalog-item__img--hit">
               <picture>
-                <source srcset="./img/item-1-desktop.jpg" media="(min-width: 900px)">
                 <source srcset="./img/item-1-tablet.jpg" media="(min-width: 400px)">
                 <img src="./img/item-1-mobile.jpg" alt="Фото 1">
               </picture>
@@ -112,7 +166,6 @@
           <div class="catalog-item">
             <div class="catalog-item__img  catalog-item__img--action">
               <picture>
-                <source srcset="./img/item-2-desktop.jpg" media="(min-width: 900px)">
                 <source srcset="./img/item-2-tablet.jpg" media="(min-width: 400px)">
                 <img src="./img/item-2-mobile.jpg" alt="Фото 2">
               </picture>
@@ -129,7 +182,6 @@
           <div class="catalog-item">
             <div class="catalog-item__img  catalog-item__img--free-10">
               <picture>
-                <source srcset="./img/item-3-desktop.jpg" media="(min-width: 900px)">
                 <source srcset="./img/item-3-tablet.jpg" media="(min-width: 400px)">
                 <img src="./img/item-3-mobile.jpg" alt="Фото 3">
               </picture>
@@ -146,7 +198,6 @@
           <div class="catalog-item">
             <div class="catalog-item__img  catalog-item__img--nothing">
               <picture>
-                <source srcset="./img/item-4-desktop.jpg" media="(min-width: 900px)">
                 <source srcset="./img/item-4-tablet.jpg" media="(min-width: 400px)">
                 <img src="./img/item-4-mobile.jpg" alt="Фото 4">
               </picture>
@@ -162,6 +213,75 @@
 
         </div>
 
+        <div class="gallery  gallery--hide">
+
+  <!-- 5       -->
+          <div class="catalog-item">
+            <div class="catalog-item__img  catalog-item__img--hit">
+              <picture>
+                <source srcset="./img/item-1-tablet.jpg" media="(min-width: 400px)">
+                <img src="./img/item-1-mobile.jpg" alt="Фото 1">
+              </picture>
+            </div>
+            <div class="catalog-item__descr">
+              <h3 class="catalog-item__title  catalog-item__title--anapa">Морской круиз в Анапу</h3>
+              <p class="catalog-item__track"><b>Маршрут:</b> Сочи-Лазаревское-Геленжик-Анапа</p>
+              <p class="catalog-item__time-trip"><b>Продолжительность:</b> 10 ч. 0 мин.</p>
+              <p class="catalog-item__price">49 000 руб.</p>
+            </div>
+          </div>
+
+  <!-- 6 -->
+          <div class="catalog-item">
+            <div class="catalog-item__img  catalog-item__img--action">
+              <picture>
+                <source srcset="./img/item-2-tablet.jpg" media="(min-width: 400px)">
+                <img src="./img/item-2-mobile.jpg" alt="Фото 2">
+              </picture>
+            </div>
+            <div class="catalog-item__descr">
+              <h3 class="catalog-item__title">Обзорная морская прогулка с экскурсией</h3>
+              <p class="catalog-item__track"><b>Маршрут:</b> Сочи-Адлер-Сочи (без высадки) </p>
+              <p class="catalog-item__time-trip"><b>Продолжительность:</b> 1 ч. 0 мин.</p>
+              <p class="catalog-item__price">5 000 руб. <span>15000 руб.</span></p>
+            </div>
+          </div>
+
+  <!-- 7 -->
+          <div class="catalog-item">
+            <div class="catalog-item__img  catalog-item__img--free-10">
+              <picture>
+                <source srcset="./img/item-3-tablet.jpg" media="(min-width: 400px)">
+                <img src="./img/item-3-mobile.jpg" alt="Фото 3">
+              </picture>
+            </div>
+            <div class="catalog-item__descr">
+              <h3 class="catalog-item__title">Морская прогулка в Геленжик</h3>
+              <p class="catalog-item__track"><b>Маршрут:</b> Сочи-Туапсе-Геленджик</p>
+              <p class="catalog-item__time-trip"><b>Продолжительность:</b> 12 ч. 30 мин.</p>
+              <p class="catalog-item__price">7 000 руб. <span>10000 руб.</p>
+            </div>
+          </div>
+
+  <!-- 8 -->
+          <div class="catalog-item">
+            <div class="catalog-item__img  catalog-item__img--nothing">
+              <picture>
+                <source srcset="./img/item-4-tablet.jpg" media="(min-width: 400px)">
+                <img src="./img/item-4-mobile.jpg" alt="Фото 4">
+              </picture>
+            </div>
+            <div class="catalog-item__descr">
+              <h3 class="catalog-item__title">Морской круиз в Новороссийск</h3>
+              <p class="catalog-item__track"><b>Маршрут:</b> Сочи-Геленджик-Новороссийск-Геленджик-Сочи</p>
+              <p class="catalog-item__time-trip"><b>Продолжительность:</b> 13 ч. 0 мин.</p>
+              <p class="catalog-item__price">14 800 руб.</p>
+            </div>
+          </div>
+
+        </div>
+
+
         <button class="btn  btn--cruise">Больше круизов</button>
 
       </div>
@@ -170,28 +290,31 @@
 
   <footer class="page-footer">
 
-    <ul class="contacts">
-      <li class="contacts__item"><a href="#">Вход для партнеров</a></li>
-      <li class="contacts__item"><a href="#">О компании</a></li>
-      <li class="contacts__item"><a href="#">Контакты</a></li>
-    </ul>
+    <div class="page-footer__container">
 
-    <div class="social-block">
-      <p class="social-block__title">Будь на связи:</p>
-      <ul class="social-block__list">
-        <li class="social-block__item"><a class="social-block__link social-block__link--vk" href="#">Вк</a></li>
-        <li class="social-block__item"><a class="social-block__link social-block__link--ok" href="#">Ок</a></li>
-        <li class="social-block__item"><a class="social-block__link social-block__link--youtube" href="#">YouTube</a></li>
-        <li class="social-block__item"><a class="social-block__link social-block__link--insta" href="#">Insta</a></li>
+      <ul class="contacts">
+        <li class="contacts__item"><a href="#">Вход для партнеров</a></li>
+        <li class="contacts__item"><a href="#">О компании</a></li>
+        <li class="contacts__item"><a href="#">Контакты</a></li>
       </ul>
-    </div>
 
-    <div class="footer-info">
-      <p class="footer-info__phone">8 800 500-61-05</p>
-      <p class="footer-info__support">Круглосуточная поддержка</p>
-      <p class="footer-info__copyright">&#169; 2019 ООО "Городские Круизы"</p>
-    </div>
+      <div class="social-block">
+        <p class="social-block__title">Будь на связи:</p>
+        <ul class="social-block__list">
+          <li class="social-block__item"><a class="social-block__link social-block__link--vk" href="#">Вк</a></li>
+          <li class="social-block__item"><a class="social-block__link social-block__link--ok" href="#">Ок</a></li>
+          <li class="social-block__item"><a class="social-block__link social-block__link--youtube" href="#">YouTube</a></li>
+          <li class="social-block__item"><a class="social-block__link social-block__link--insta" href="#">Insta</a></li>
+        </ul>
+      </div>
 
+      <div class="footer-info">
+        <p class="footer-info__phone"><a href="tel:88005006105">8 800 500-61-05</a></p>
+        <p class="footer-info__support">Круглосуточная поддержка</p>
+        <p class="footer-info__copyright">&#169; 2019 ООО "Городские Круизы"</p>
+      </div>
+
+    </div>
 
   </footer>
 

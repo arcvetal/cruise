@@ -1,6 +1,17 @@
 .catalog-item {
   background-color: white;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  cursor: pointer;
+  transition: 0.3s all;
+  border-radius: 10px;
+
+  &:hover {
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.05s;
+  }
 
   &:not(:last-of-type) {
     margin-bottom: 20px;
@@ -10,6 +21,7 @@
     position: relative;
 
     & img {
+      border-radius: 10px 10px 0 0;
       display: block;
       width: 100%;
     }

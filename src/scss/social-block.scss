@@ -104,3 +104,11 @@
   }
 
 }
+
+@media(min-width: $width-750){
+  .social-block {
+    &__title {
+      margin-bottom: 10px;
+    }
+  }
+}

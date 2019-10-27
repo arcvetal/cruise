@@ -26,3 +26,17 @@
     }
   }
 }
+
+@media(min-width: 1080px) {
+  .header-slider {
+
+    &__item {
+
+      & img {
+        height: 608px;
+        width: 1674px;
+        margin-left: 0;
+      }
+    }
+  }
+}

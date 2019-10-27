@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13" width="12" height="13">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #33c7fd } 
+	</style>
+	<g id="1">
+		<g id="меню">
+			<path id="user" class="shp0" d="M2 13L1 12L1 10C1 10 1.14 8.02 4 8C4 8 5.69 10.31 8 8C8 8 11 8.1 11 10C11 11.9 11 12 11 12L10 13L2 13ZM6 1C7.66 1 9 2.34 9 4C9 5.66 7.66 7 6 7C4.34 7 3 5.66 3 4C3 2.34 4.34 1 6 1Z" />
+		</g>
+	</g>
+</svg>
