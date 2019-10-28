@@ -12,7 +12,7 @@ $(document).ready(function(){
   });
 });
 
-var pageBody = document.querySelector('body');
+var pageContent = document.querySelector('.page-content');
 
 var hamburger = document.querySelector('.top-menu');
 var mainMenu = document.querySelector('.main-menu');
@@ -55,12 +55,53 @@ uploadBtn.addEventListener('click', function () {
   uploadBtn.classList.add('btn--invisible');
 });
 
+
+  //
+  //
+  // Открытие/закрытие списка сотрировки
+  //
+  //
+
+pageContent.addEventListener('click', function (evt) {
+
+  if (evt.target === filterInput) {
+
+    filterList.classList.toggle('page-content__filter-list--show');
+    filterInput.classList.toggle('page-content__filter-title--opened');
+
+  } else {
+
+    if (filterList.classList.contains('page-content__filter-list--show') &&
+    filterInput.classList.contains('page-content__filter-title--opened')) {
+
+      filterList.classList.remove('page-content__filter-list--show');
+      filterInput.classList.remove('page-content__filter-title--opened');
+
+    }
+  }
+
+});
+
+
 //
 //
 // Сортировка списка
 //
 //
-filterInput.addEventListener('click', function () {
-  filterList.classList.toggle('page-content__filter-list--show');
-  filterInput.classList.toggle('page-content__filter-title--opened');
+
+var gallery = document.getElementById("gallery");
+var listElms = gallery.querySelectorAll(".catalog-item");
+
+filterList.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (e.target.id == 'price-up') {
+    var sortedElms = Array.prototype.slice.call(listElms).sort(function(a, b) {
+      return a.dataset.itemPrice > b.dataset.itemPrice
+    });
+
+    for (var i = 0; i < sortedElms.length; i++) {
+      gallery.appendChild(sortedElms[i]);
+    }
+  }
 });
