@@ -18,10 +18,11 @@
 
   &__filter {
     text-align: center;
+    margin-bottom: 30px;
   }
 }
 
-@media(min-width: 400px) {
+@media(min-width: $width-400) {
   .page-content {
     background-color: $gray-bg;
 
@@ -37,8 +38,28 @@
     }
 
     &__filter {
-      font-size: 18px;
-      margin-bottom: 10px;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media(min-width: $width-620){
+  .page-content {
+
+    &__wrapper {
+      max-width: 100%;
+      padding-top: 20px;
+      margin: 0;
+    }
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__filter {
+      font-size: 14px;
+      line-height: 24px;
     }
   }
 }

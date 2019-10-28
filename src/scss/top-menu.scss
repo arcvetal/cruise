@@ -1,11 +1,10 @@
 .top-menu {
-  position: absolute;
-  top: 20px;
-  left: 15px;
   width: 23px;
   height: 18px;
   font-size: 0;
+  margin-right: auto;
   z-index: 3;
+  cursor: pointer;
 
   & span {
     display: block;

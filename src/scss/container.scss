@@ -2,3 +2,10 @@
   box-sizing: border-box;
   padding: 0 15px;
 }
+
+
+@media(min-width: $width-620){
+  .container {
+    padding: 0 2vw;
+  }
+}

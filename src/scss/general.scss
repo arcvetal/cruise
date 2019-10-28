@@ -1,32 +1,70 @@
 @font-face {
     font-family: 'Roboto Slab';
-    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url('robotoslabregular.woff2') format('woff2'), url('robotoslabregular.woff') format('woff');
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url('../fonts/robotoslabregular.woff2') format('woff2'), url('../fonts/robotoslabregular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto Slab';
-    src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url('robotoslabbold.woff2') format('woff2'), url('robotoslabbold.woff') format('woff');
+    src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url('../fonts/robotoslabbold.woff2') format('woff2'), url('../fonts/robotoslabbold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Raleway';
-    src: local('Raleway Regular'), local('Raleway-Regular'), url('ralewayregular.woff2') format('woff2'), url('ralewayregular.woff') format('woff'), url('ralewayregular.ttf') format('truetype');
+    src: local('Raleway Regular'), local('Raleway-Regular'), url('../fonts/ralewayregular.woff2') format('woff2'), url('../fonts/ralewayregular.woff') format('woff'), url('ralewayregular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Raleway';
-    src: local('Raleway Bold'), local('Raleway-Bold'), url('ralewaybold.woff2') format('woff2'), url('ralewaybold.woff') format('woff'), url('ralewaybold.ttf') format('truetype');
+    src: local('Raleway Bold'), local('Raleway-Bold'), url('../fonts/ralewaybold.woff2') format('woff2'), url('../fonts/ralewaybold.woff') format('woff'), url('../fonts/ralewaybold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 body {
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+  min-width: 320px;
+  max-width: 1674px;
+  box-shadow: 0px 0px 80px -5px rgba(173, 216, 230, 0.8);
+}
+
+ul {
+  list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.wrapper {
+  position: absolute;
+  width: 100vw;
+  top: 20px;
+  left: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media(min-width: $width-750) {
+  .wrapper {
+    top: 30px;
+    left: 35px;
+    width: 720px;
+    left: calc(50vw - 360px);
+  }
+}
+
+@keyframes moving {
+  30% {  webkit-transform: skewX(-45deg) translateX(33.5em);
+    transform: skewX(-45deg) translateX(33.5em);
+  }
+
+  100% {  webkit-transform: skewX(-45deg) translateX(33.5em);
+    transform: skewX(-45deg) translateX(33.5em);
+  }
 }

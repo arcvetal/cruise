@@ -14,6 +14,7 @@
   font-weight: 400;
   border: none;
   outline: none;
+  border-radius: 5px;
 
   position: relative;
   overflow: hidden;
@@ -57,15 +58,8 @@
   &--cruise {
     margin: 0 auto;
   }
-}
 
-
-@keyframes moving {
-  30% {  webkit-transform: skewX(-45deg) translateX(33.5em);
-    transform: skewX(-45deg) translateX(33.5em);
-  }
-
-  100% {  webkit-transform: skewX(-45deg) translateX(33.5em);
-    transform: skewX(-45deg) translateX(33.5em);
+  &--invisible {
+    display: none;
   }
 }
