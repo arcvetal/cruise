@@ -12,6 +12,7 @@ $(document).ready(function(){
   });
 });
 
+var pageBody = document.querySelector('body');
 
 var hamburger = document.querySelector('.top-menu');
 var mainMenu = document.querySelector('.main-menu');
@@ -20,7 +21,15 @@ var headSlider = document.querySelector('.page-header__wrapper');
 var uploadBtn = document.querySelector('.btn--cruise');
 var uploadGallery = document.querySelector('.gallery--hide');
 
+var filterInput = document.querySelector('.page-content__filter-title');
+var filterList = document.querySelector('.page-content__filter-list');
+
+
+//
+//
 // Меню бургeр
+//
+//
 
   hamburger.addEventListener('click', function (evt) {
     hamburger.classList.toggle('top-menu--open');
@@ -35,9 +44,23 @@ var uploadGallery = document.querySelector('.gallery--hide');
     }
   });
 
+//
+//
 // Загрузка Галереи
+//
+//
 
 uploadBtn.addEventListener('click', function () {
   uploadGallery.classList.remove('gallery--hide');
   uploadBtn.classList.add('btn--invisible');
+});
+
+//
+//
+// Сортировка списка
+//
+//
+filterInput.addEventListener('click', function () {
+  filterList.classList.toggle('page-content__filter-list--show');
+  filterInput.classList.toggle('page-content__filter-title--opened');
 });
