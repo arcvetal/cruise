@@ -176,7 +176,7 @@ body {
     width: 23px;
     height: 2px;
     background-color: #0d3351;
-    transition: 0.4s all; }
+    transition: width 0.3s, transform 0.5s; }
     .top-menu span::before, .top-menu span::after {
       content: "";
       position: absolute;
@@ -185,7 +185,7 @@ body {
       height: 2px;
       background-color: #0d3351;
       z-index: 2;
-      transition: 0.5s all; }
+      transition: transform 0.5s; }
     .top-menu span::before {
       top: -7px; }
     .top-menu span::after {
