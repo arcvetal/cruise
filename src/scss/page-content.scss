@@ -15,8 +15,6 @@
     font-weight: 400;
   }
 
-
-
   &__filter {
     display: flex;
     justify-content: center;
@@ -44,6 +42,11 @@
     letter-spacing: -1px;
     color: $font-color;
 
+    & span {
+      font-size: 15px;
+      letter-spacing: -6px;
+    }
+
     &--opened {
       border-radius: 5px;
       background-color: $font-color;
@@ -56,15 +59,6 @@
       background-color: $font-color;
       color: white;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    &::after {
-      content: "▲";
-      display: block;
-      position: absolute;
-      right: 6px;
-      top: 6px;
-      font-size: 14px;
     }
   }
 
@@ -90,7 +84,6 @@
     &:first-of-type {
       & a {
         padding-top: 8px;
-        // border-radius: 10px 10px 0 0;
       }
     }
 
@@ -126,36 +119,6 @@
       top: 11px;
       font-size: 12px;
     }
-
-    &--price-up {
-      &::after {
-        content: "▲";
-        left: 77px;
-      }
-    }
-
-    &--price-down {
-      &::after {
-        content: "▼";
-        left: 77px;
-      }
-    }
-
-    &--time-up {
-      &::after {
-        content: "▲";
-        left: 145px;
-      }
-    }
-
-    &--time-down {
-      &::after {
-        content: "▼";
-        left: 145px;
-      }
-    }
-
-
   }
 }
 

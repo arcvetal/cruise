@@ -89,19 +89,143 @@ pageContent.addEventListener('click', function (evt) {
 //
 //
 
+// var sortByPriceUp = function(arr) {
+//   arr.sort((a, b) => a.dataset.itemPrice > b.dataset.itemPrice ? 1 : -1);
+// }
+
+
+
+
 var gallery = document.getElementById("gallery");
 var listElms = gallery.querySelectorAll(".catalog-item");
+var arrElms = [];
+
+for (var i = 0; i < listElms.length; i++) {
+  arrElms.push(listElms[i]);
+}
+
+
+
+//
+// console.log(arrElms[0].dataset.itemPrice);
+// console.log(listElms[0].dataset.itemPrice);
+// var sortByPriceUp = function(arr) {
+//   arr.sort((a, b) => a.dataset.itemPrice > b.dataset.itemPrice ? 1 : -1);
+// }
+//
+//
+// var sortedArr = sortByPriceUp(listElms);
 
 filterList.addEventListener('click', function (e) {
   e.preventDefault();
 
+  // price up
   if (e.target.id == 'price-up') {
-    var sortedElms = Array.prototype.slice.call(listElms).sort(function(a, b) {
-      return a.dataset.itemPrice > b.dataset.itemPrice
+    while (gallery.firstChild) {
+      gallery.removeChild(gallery.firstChild);
+    }
+
+    arrElms.sort(function(a, b){
+      var priceA = parseInt(a.dataset.itemPrice);
+      var priceB = parseInt(b.dataset.itemPrice);
+
+      if (priceA < priceB) {
+        return -1;
+      }
+      if (priceA > priceB) {
+        return 1;
+      }
+      return 0;
     });
 
-    for (var i = 0; i < sortedElms.length; i++) {
-      gallery.appendChild(sortedElms[i]);
+    for (var i = 0; i < arrElms.length; i++) {
+      gallery.appendChild(arrElms[i]);
     }
   }
+
+
+  // price down
+  if (e.target.id == 'price-down') {
+    while (gallery.firstChild) {
+      gallery.removeChild(gallery.firstChild);
+    }
+
+    arrElms.sort(function(a, b){
+      var priceA = parseInt(a.dataset.itemPrice);
+      var priceB = parseInt(b.dataset.itemPrice);
+
+      if (priceA < priceB) {
+        return 1;
+      }
+      if (priceA > priceB) {
+        return -1;
+      }
+      return 0;
+    });
+
+    for (var i = 0; i < arrElms.length; i++) {
+      gallery.appendChild(arrElms[i]);
+    }
+  }
+
+
+  // trip time-up
+  if (e.target.id == 'time-up') {
+    while (gallery.firstChild) {
+      gallery.removeChild(gallery.firstChild);
+    }
+
+    arrElms.sort(function(a, b){
+      var priceA = parseInt(a.dataset.timeTrip);
+      var priceB = parseInt(b.dataset.timeTrip);
+
+      if (priceA < priceB) {
+        return -1;
+      }
+      if (priceA > priceB) {
+        return 1;
+      }
+      return 0;
+    });
+
+    for (var i = 0; i < arrElms.length; i++) {
+      gallery.appendChild(arrElms[i]);
+    }
+  }
+
+
+  // trip time-down
+  if (e.target.id == 'time-down') {
+    while (gallery.firstChild) {
+      gallery.removeChild(gallery.firstChild);
+    }
+
+    arrElms.sort(function(a, b){
+      var priceA = parseInt(a.dataset.timeTrip);
+      var priceB = parseInt(b.dataset.timeTrip);
+
+      if (priceA < priceB) {
+        return 1;
+      }
+      if (priceA > priceB) {
+        return -1;
+      }
+      return 0;
+    });
+
+    for (var i = 0; i < arrElms.length; i++) {
+      gallery.appendChild(arrElms[i]);
+    }
+  }
+
 });
+
+// if (e.target.id == 'price-up') {
+  //   var sortedElms = Array.prototype.slice.call(listElms).sort(function(a, b) {
+    //     return a.dataset.itemPrice > b.dataset.itemPrice
+    //   });
+    //
+    //   for (var i = 0; i < sortedElms.length; i++) {
+      //     gallery.appendChild(sortedElms[i]);
+      //   }
+      // }
