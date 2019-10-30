@@ -19,7 +19,7 @@ var mainMenu = document.querySelector('.main-menu');
 var headSlider = document.querySelector('.page-header__wrapper');
 
 var uploadBtn = document.querySelector('.btn--cruise');
-var uploadGallery = document.querySelector('.gallery--hide');
+var uploadGallery = document.querySelectorAll('.catalog-item--hide');
 
 var filterInput = document.querySelector('.page-content__filter-title');
 var filterList = document.querySelector('.page-content__filter-list');
@@ -51,7 +51,9 @@ var filterList = document.querySelector('.page-content__filter-list');
 //
 
 uploadBtn.addEventListener('click', function () {
-  uploadGallery.classList.remove('gallery--hide');
+  for (var i = 0; i < uploadGallery.length; i++) {
+    uploadGallery[i].classList.remove('catalog-item--hide');
+  }
   uploadBtn.classList.add('btn--invisible');
 });
 
@@ -64,7 +66,7 @@ uploadBtn.addEventListener('click', function () {
 
 pageContent.addEventListener('click', function (evt) {
 
-  if (evt.target === filterInput) {
+  if (evt.target === filterInput || evt.target === filterInput.firstElementChild) {
 
     filterList.classList.toggle('page-content__filter-list--show');
     filterInput.classList.toggle('page-content__filter-title--opened');

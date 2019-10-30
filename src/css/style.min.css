@@ -51,6 +51,10 @@ ul {
     width: 720px;
     left: calc(50vw - 360px); } }
 
+@media (min-width: 1674px) {
+  .wrapper {
+    left: 477px; } }
+
 @keyframes moving {
   30% {
     webkit-transform: skewX(-45deg) translateX(33.5em);
@@ -604,6 +608,8 @@ ul {
   cursor: pointer;
   transition: 0.3s all;
   border-radius: 10px; }
+  .catalog-item--hide {
+    display: none; }
   .catalog-item:hover {
     -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);

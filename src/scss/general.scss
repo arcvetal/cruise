@@ -59,6 +59,12 @@ ul {
   }
 }
 
+@media(min-width: 1674px) {
+  .wrapper {
+    left: 477px;
+  }
+}
+
 @keyframes moving {
   30% {  webkit-transform: skewX(-45deg) translateX(33.5em);
     transform: skewX(-45deg) translateX(33.5em);
