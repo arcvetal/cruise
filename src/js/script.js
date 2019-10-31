@@ -3,14 +3,16 @@ $(document).ready(function(){
     dots: true,
     arrows:false,
     infinite: true,
-    fade: true,
+    fade: false,
     speed: 1500,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     slidesToShow: 1,
     adaptiveHeight: true
   });
 });
+
+
 
 var pageContent = document.querySelector('.page-content');
 
