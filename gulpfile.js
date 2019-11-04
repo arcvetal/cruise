@@ -232,17 +232,6 @@ gulp.task('watcher', function() {
 //         gulp.start('fonts:build');
 //     });
 
-// //
-// //
-// // //------------------CLEAN
-gulp.task('clean', function (cb) {
-  return rimraf(path.clean, cb);
-});
-// //
-
-//
-
-
 
 // // //------------------CLEAN
 gulp.task('clean', function (cb) {
@@ -252,127 +241,120 @@ gulp.task('clean', function (cb) {
 
 
 // ---------- HTML
-
-
-gulp.task('html:build', function () {
-    return gulp.src(path.src.html) //Выберем файлы по нужному пути
-        .pipe(plumber()) // пламберим
-        .pipe(rigger()) //Прогоним через rigger
-        .pipe(htmlmin({ collapseWhitespace: true })) // сжимаем
-        .pipe(gulp.dest(path.build.html)); //Выплюнем их в папку build
-        // .pipe(browserSync.reload({stream: true})); //И перезагрузим наш сервер для обновлений
-});
-
-
-// // ---------  CSS
-
-gulp.task('styles', function () {
-    return gulp.src('./src/scss/style.scss')
-        .pipe(bulkSass()) //Выберем наш main.scss
-        .pipe(sourcemaps.init()) //То же самое что и с js
-        .pipe(plumber()) // пламберим
-        .pipe(rigger()) //Прогоним через rigger
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer({
-            cascade: false
-        }))
-        .pipe(csso({
-            restructure: false,
-            sourceMap: true,
-            debug: true
-        }))
-        .pipe(rename('style.min.css'))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.css));
-        // .pipe(browserSync.stream());  // =============== потом поменять на билд
-        // .pipe(browserSync.stream());
-
-});
-
-// //------------------------ IMG
 //
-
-
-gulp.task('image:build', function () {
-    return gulp.src(path.src.img) //Выберем наши картинки
-        .pipe(imagemin())
-        .pipe(gulp.dest(path.build.img)); //И бросим в build
-        // .pipe(reload({stream: true}));
-});
-
-
-
-// //------------------------ SVG
 //
-
-gulp.task('svgSprite', function() {
-  // return gulp.src('./src/img/svg/*.svg')
-  //   .pipe(imagemin([
-  //     imagemin.svgo({
-  //       plugins: [
-  //         {removeViewBox: true},
-  //         {cleanupIDs: false}
-  //       ]
-  //     })
-  //   ]))
-  //   .pipe(svgstore())
-  //   .pipe(gulp.dest(path.build.svg));
-
-    return gulp.src('source/img/*.svg')
-      .pipe(svgstore({
-        inlineSvg: true
-      }))
-      .pipe(rename('sprite.svg'))
-      .pipe(gulp.dest(path.build.svg));
-});
-
-
-// //------------------------ FONTS
+// gulp.task('html:build', function () {
+//     return gulp.src(path.src.html) //Выберем файлы по нужному пути
+//         .pipe(plumber()) // пламберим
+//         .pipe(rigger()) //Прогоним через rigger
+//         .pipe(htmlmin({ collapseWhitespace: true })) // сжимаем
+//         .pipe(gulp.dest(path.build.html)); //Выплюнем их в папку build
+//         // .pipe(browserSync.reload({stream: true})); //И перезагрузим наш сервер для обновлений
+// });
 //
-gulp.task('fonts:build', function() {
-    return gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts));
-});
-
-
-// //------------------------JS
 //
-gulp.task('js:build', function () {
-    return gulp.src(path.src.js) //Найдем наш main файл
-        .pipe(plumber()) // пламберим
-        .pipe(rigger()) //Прогоним через rigger
-        .pipe(sourcemaps.init()) //Инициализируем sourcemap
-        .pipe(uglify()) //Сожмем наш js
-        .pipe(sourcemaps.write()) //Пропишем карты
-        // .pipe(rename('script.min.js'))
-        .pipe(rename('mains.js'))
-        .pipe(gulp.dest(path.build.js));//Выплюнем готовый файл в build
-        // .pipe(browserSync.reload());//И перезагрузим сервер
-});
-
-gulp.task('js:copyjquery', function () {
-  return gulp.src('src/js/jquery-3.4.1.min.js')
-    .pipe(gulp.dest('build/js'))
-});
-
-gulp.task('js:copyslick', function () {
-  return gulp.src('src/js/slick.min.js')
-    .pipe(gulp.dest('build/js'))
-});
-
-
-
-gulp.task('js:include', function () {
-  return gulp.src('src/js/script.js')
-    .pipe(plumber())
-    .pipe(rigger())
-    .pipe(gulp.dest('build/js'))
-});
-
-gulp.task('js:minify', function () {
-  return gulp.src('build/js/script.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('build/js'))
-});
-
-gulp.task('build', gulp.series('clean', 'html:build', 'styles', 'image:build', 'svgSprite', 'fonts:build','js:copyjquery', 'js:copyslick', 'js:include', 'js:minify'));
+// // // ---------  CSS
+//
+// gulp.task('styles', function () {
+//     return gulp.src('./src/scss/style.scss')
+//         .pipe(bulkSass()) //Выберем наш main.scss
+//         .pipe(sourcemaps.init()) //То же самое что и с js
+//         .pipe(plumber()) // пламберим
+//         .pipe(rigger()) //Прогоним через rigger
+//         .pipe(sass().on('error', sass.logError))
+//         .pipe(autoprefixer({
+//             cascade: false
+//         }))
+//         .pipe(csso({
+//             restructure: false,
+//             sourceMap: true,
+//             debug: true
+//         }))
+//         .pipe(rename('style.min.css'))
+//         .pipe(sourcemaps.write())
+//         .pipe(gulp.dest(path.build.css));
+//         // .pipe(browserSync.stream());  // =============== потом поменять на билд
+//         // .pipe(browserSync.stream());
+//
+// });
+//
+// // //------------------------ IMG
+// //
+//
+//
+// gulp.task('image:build', function () {
+//     return gulp.src(path.src.img) //Выберем наши картинки
+//         .pipe(imagemin())
+//         .pipe(gulp.dest(path.build.img)); //И бросим в build
+//         // .pipe(reload({stream: true}));
+// });
+//
+//
+//
+// // //------------------------ SVG
+// //
+//
+// gulp.task('svgSprite', function() {
+//
+//     return gulp.src('source/img/*.svg')
+//       .pipe(svgstore({
+//         inlineSvg: true
+//       }))
+//       .pipe(rename('sprite.svg'))
+//       .pipe(gulp.dest(path.build.svg));
+// });
+//
+//
+// // //------------------------ FONTS
+// //
+// gulp.task('fonts:build', function() {
+//     return gulp.src(path.src.fonts)
+//         .pipe(gulp.dest(path.build.fonts));
+// });
+//
+//
+// // //------------------------JS
+// //
+// gulp.task('js:build', function () {
+//     return gulp.src(path.src.js) //Найдем наш main файл
+//         .pipe(plumber()) // пламберим
+//         .pipe(rigger()) //Прогоним через rigger
+//         .pipe(sourcemaps.init()) //Инициализируем sourcemap
+//         .pipe(uglify()) //Сожмем наш js
+//         .pipe(sourcemaps.write()) //Пропишем карты
+//         // .pipe(rename('script.min.js'))
+//         .pipe(rename('mains.js'))
+//         .pipe(gulp.dest(path.build.js));//Выплюнем готовый файл в build
+//         // .pipe(browserSync.reload());//И перезагрузим сервер
+// });
+//
+// gulp.task('js:copyjquery', function () {
+//   return gulp.src('src/js/jquery-3.4.1.min.js')
+//     .pipe(gulp.dest('build/js'))
+// });
+//
+// gulp.task('js:copyslick', function () {
+//   return gulp.src('src/js/slick.min.js')
+//     .pipe(gulp.dest('build/js'))
+// });
+//
+// gulp.task('js:copyslickstyle', function () {
+//   return gulp.src('src/css/slick.css')
+//     .pipe(gulp.dest('build/css'))
+// });
+//
+//
+// gulp.task('js:include', function () {
+//   return gulp.src('src/js/script.js')
+//     .pipe(plumber())
+//     .pipe(rigger())
+//     .pipe(gulp.dest('build/js'))
+// });
+//
+// gulp.task('js:minify', function () {
+//   return gulp.src('build/js/script.js')
+//     .pipe(uglify())
+//     .pipe(gulp.dest('build/js'))
+// });
+//
+// gulp.task('build', gulp.series('clean', 'html:build', 'styles', 'image:build', 'svgSprite', 'fonts:build','js:copyjquery', 'js:copyslick', 'js:copyslickstyle', 'js:include', 'js:minify'));

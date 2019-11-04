@@ -193,3 +193,10 @@ $slick-opacity-not-active: 0.7 !default;
         }
     }
 }
+
+@media(min-width: 1920px) {
+  .slick-dots {
+    max-width: 950px;
+    left: 360px;
+  }
+}
